@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: latest
         cache: 'npm'
-    - name: Install npm
-      run: npm run install
+    - name: Start npm
+      run: npm run start &
     - name: Run tests
-      run: npm test
+      run: npm run test
