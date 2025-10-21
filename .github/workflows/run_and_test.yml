@@ -11,20 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo code
+    - name: Checkout the repository
       uses: actions/checkout@v4
-    - name: Setup Node.js 20v
+    - name: Use Node.js v20
       uses: actions/setup-node@v4
       with:
         node-version: 20
         cache: 'npm'
-    - name: Install npm
+    - name: Install NPM modules
       run: npm install
-    - name: Start back end
-      run: npm run server &
-    - name: Start front end
-      run: npm run start &
+    - name: Replace the backend endpoint
+      run: echo "export const settings = {host:\"http://localhost:3030\"}" > src/config.js
+    - name: Start BackEnd
+      run: npm run start-be &
+    - name: Start FrontEnd
+      run: npm run start-fe &
     - name: Install Browsers
-      run: npx playwright install
-    - name: Run tests
-      run: npm run test
+      run: npx playwright install 
+    - name: Execute UI tests
+      run: npm run test:ui
