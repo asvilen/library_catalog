@@ -23,5 +23,7 @@ jobs:
       run: npm run start &
     - name: Start front end
       run: npm run server &
+    - name: Install Browsers
+      run: npx playwright install
     - name: Run tests
       run: npm run test
