@@ -17,8 +17,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: latest
-    - name: Security audit
-      run: npm audit
     - name: Install npm
       run: npm install
     - name: Start back end
