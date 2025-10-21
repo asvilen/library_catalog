@@ -13,10 +13,10 @@ jobs:
     steps:
     - name: Checkout repo code
       uses: actions/checkout@v4
-    - name: Setup Node.js latest
+    - name: Setup Node.js 20v
       uses: actions/setup-node@v4
       with:
-        node-version: latest
+        node-version: 20
     - name: Install npm
       run: npm install
     - name: Start back end
