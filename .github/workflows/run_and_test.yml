@@ -35,10 +35,8 @@ jobs:
       with:
         service-id: ${{ secrets.RENDER_BACK_END_KEY }}
         api-key: ${{ secrets.RENDER_API_KEY }}
-        wait-for-success: true
     - name: Deploy FrontEnd on Render
       uses: johnbeynon/render-deploy-action@v0.0.8
       with:
         service-id: ${{ secrets.RENDER_FRONT_END_KEY }}
         api-key: ${{ secrets.RENDER_API_KEY }}
-        wait-for-success: true
