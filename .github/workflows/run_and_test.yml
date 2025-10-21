@@ -21,7 +21,9 @@ jobs:
       run: npm audit
     - name: Install npm
       run: npm install
-    - name: Start npm
+    - name: Start back end
       run: npm start &
+    - name: Start front end
+      run: npm server &
     - name: Run tests
       run: npm test
