@@ -1,4 +1,4 @@
-name: Build, Test and Deploy of Render
+name: Build, Test and Deploy on Render
 
 on:
   push:
