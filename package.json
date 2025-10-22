@@ -4,8 +4,8 @@
     "description": "Online Book Library Single Page Application",
     "main": "index.html",
     "scripts": {
-        "start-fe": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1",
-        "start-be": "cd server && node server.js",
+        "start": "http-server -a localhost -p 3000 -P http://localhost:3000? -c-1",
+        "server": "cd server && node server.js",
         "test": "playwright test"
     },
     "author": "",
@@ -15,7 +15,7 @@
         "page": "^1.11.6"
     },
     "devDependencies": {
-        "@playwright/test": "^1.56.1",
-        "http-server": "^14.1.1"
+        "http-server": "^14.1.1",
+        "@playwright/test": "1.44.1"
     }
 }
